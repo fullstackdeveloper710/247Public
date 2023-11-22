@@ -1,0 +1,410 @@
+@import "../../../styles/variable.scss";
+
+.auth {
+  background: $body-bg;
+  position: static;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  &__Wrapper {
+    width: 960px;
+  }
+
+  &__inner {
+    max-width: 450px;
+    width: 100%;
+    margin: auto;
+  }
+
+  &__dialog {
+    background: $bg-white;
+    padding: 30px;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.06);
+    border-radius: 24px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc;
+    overflow-y: auto;
+  }
+
+  // scrollBar
+
+  .auth__dialog::-webkit-scrollbar {
+    width: 3px;
+    border-radius: 3px;
+  }
+
+  .auth__dialog::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .auth__dialog::-webkit-scrollbar-thumb {
+    background-color: #b6b6b6;
+  }
+
+  &__header {
+    text-align: center;
+    svg {
+      width: 170px;
+    }
+
+    &__info {
+      margin-top: 24px;
+      margin-bottom: 40px;
+      h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: $tertiary-dark-color;
+      }
+
+      p {
+        color: $sub-header;
+        font-size: 1.125rem;
+        margin: 0;
+        font-weight: 400;
+        letter-spacing: -0.5px;
+      }
+    }
+  }
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+    svg {
+      order: 2;
+      margin: 0 0 0 8px;
+    }
+  }
+
+  &__checkbx {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  &__footer {
+    text-align: center;
+    margin: 24px 0 0 0;
+    color: $sub-header;
+    font-size: 1.125rem;
+    letter-spacing: -1px;
+  }
+
+  .authLinks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+    margin-bottom: 0;
+    padding: 0;
+    list-style-type: none;
+    li {
+      margin-right: 8px;
+      padding-right: 8px;
+      border-right: 1px solid $sub-header;
+      line-height: normal;
+      color: $sub-header;
+      font-size: 1.125rem;
+      letter-spacing: -1px;
+
+      &:last-child {
+        border-right: 0;
+        margin-right: 0;
+        padding-right: 0;
+      }
+      a {
+        color: $sub-header;
+        font-size: 1.125rem;
+        margin-left: 5px;
+      }
+    }
+
+    span {
+      margin-right: 8px;
+      padding-right: 8px;
+      line-height: normal;
+      color: $sub-header;
+      font-size: 1.125rem;
+      letter-spacing: -1px;
+      a {
+        color: $sub-header;
+        font-size: 1.125rem;
+        margin-left: 5px;
+      }
+    }
+  }
+
+  &__RegisterWrapper {
+    .auth__inner {
+      max-width: 850px;
+    }
+  }
+  .inputRow {
+    label {
+      letter-spacing: -0.5px;
+    }
+  }
+
+  .customCheckbox {
+    label {
+      padding-left: 30px;
+      letter-spacing: -0.5px;
+      // text-decoration: underline;
+      // color: #0074b2;
+    }
+  }
+}
+
+.subscriptionPlan {
+  position: relative;
+
+  legend {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 15px 0 15px 0;
+    display: block;
+  }
+
+  &__inner {
+    border: 1px solid $planBorder;
+    border-radius: 14px;
+    padding: 24px;
+    margin: 0 0 0 0;
+    text-align: center;
+    background-color: $planBg;
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    min-height: 265px;
+  }
+
+  &__header {
+    &_heading {
+      font-weight: 700;
+      font-size: 1.25rem;
+      line-height: 24px;
+      color: $tertiary-dark-color;
+      margin-top: 11px;
+      display: block;
+    }
+    &_text {
+      margin: 8px 0 0 0;
+      font-size: 0.875rem;
+      line-height: 24px;
+      color: $color-dark-300;
+      letter-spacing: -0.5px;
+      display: block;
+    }
+  }
+
+  &__content {
+    margin-top: 35px;
+    display: block;
+    .bigtext {
+      font-size: 3rem;
+      color: $tertiary-dark-color;
+      font-weight: 700;
+      letter-spacing: -1.584px;
+      display: block;
+      margin-bottom: 1rem;
+      line-height: normal;
+    }
+    span {
+      margin: 8px 0 0 0;
+      font-size: 1rem;
+      line-height: 24px;
+      color: $color-dark-300;
+      display: block;
+    }
+    a {
+      margin-left: 0 !important;
+    }
+    button{
+      margin-left: 0 !important;
+      width: 100%;
+    }
+  }
+
+  input[type="radio"] {
+    // visibility: hidden;
+    position: absolute;
+    top: 29px;
+    right: 16px;
+    z-index: 999;
+    opacity: 0;
+    width: 17px;
+  }
+  input[type="radio"]:checked + label {
+    background-color: #e5f4fd !important;
+    border-color: $primary-color;
+
+    .activePln {
+      display: block !important;
+    }
+  }
+  span.activePln {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: transparent;
+    top: 25px;
+    right: 15px;
+    border-radius: 50%;
+    border: 2px solid $primary-color;
+    display: none;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 9px;
+      height: 5px;
+      border-bottom: 2px solid $primary-color;
+      border-left: 2px solid $primary-color;
+      top: 44%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+
+  input:focus + label {
+    outline: 3px solid #000 !important;
+    outline-offset: 5px;
+  }
+  .subscriptionPlanBox {
+    display: flex;
+    justify-content: space-between;
+
+    .subscriptionPlanBoxCol {
+      width: 32%;
+      margin-bottom: 20px;
+    }
+  }
+}
+.ContactUsModal {
+  .modal-body {
+    padding: 24px;
+  }
+  .modal-dialog {
+    max-width: 700px;
+    .auth__inner{
+      max-width: 100%;
+    }
+  }
+}
+
+
+// Responsive Style
+
+@media screen and (max-width: 1366px) {
+  .auth {
+    &__dialog {
+      height: auto;
+    }
+    &__header {
+      &__info {
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .inputRow {
+      label {
+        font-size: 1rem;
+      }
+    }
+
+    .customCheckbox {
+      label {
+        font-size: 1rem;
+      }
+    }
+
+    .authLinks {
+      li {
+        a {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  .registerPlan {
+    .subscriptionPlan {
+      &__inner {
+        padding: 30px !important;
+        min-height: 300px !important;
+      }
+
+      &__content {
+        .btn {
+          min-width: 100%;
+          margin-left: 0 !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .auth {
+    &__dialog {
+      height: auto;
+    }
+
+    .authLinks {
+      li {
+        font-size: 1rem;
+        a {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  .subscriptionPlanBox {
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    .subscriptionPlanBoxCol {
+      width: 100% !important;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .auth {
+    &__header {
+      &__info {
+        margin-bottom: 20px;
+        h1 {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    &__dialog {
+      padding: 30px 15px;
+    }
+    .authLinks {
+      flex-wrap: wrap;
+      li {
+        width: 100%;
+        text-align: center;
+
+        border: 0;
+        margin: 0;
+        padding: 0;
+        margin-top: 5px;
+      }
+    }
+  }
+}

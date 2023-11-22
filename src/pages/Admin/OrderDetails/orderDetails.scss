@@ -1,0 +1,316 @@
+@import "../../../styles/variable.scss";
+
+.mainWrapper {
+  background-color: $bg-white;
+  border-radius: 8px;
+  border: 1.5px solid $tertiary-lightGray-color;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.06);
+  min-height: calc(100vh - 170px);
+
+  .mainTitleWrapper {
+    padding: 30px 24px;
+
+    .mainRow {
+      .card-props {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+
+        .cardTitle {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          flex-direction: column;
+        }
+      }
+    }
+
+    .mainTitle {
+      font-size: 1.5rem;
+      line-height: 31px;
+      color: $tertiary-dark-color;
+      font-weight: 700;
+    }
+  }
+}
+
+.no-record-main {
+  padding: 0 50px 50px 50px;
+
+  .no-record {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid $primary-color;
+    border-radius: 8px;
+  }
+}
+
+._badge {
+  padding: 8px 15px;
+  border-radius: 30px;
+  min-width: 62px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  text-align: center;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.inactive {
+  background-color: $badge-inactive-bg;
+  color: $badge-inactive-color;
+}
+
+.active {
+  background-color: $badge-active-bg;
+  color: $badge-active-color;
+}
+
+.order-detail .dataTables_wrapper .dataTables_filter {
+  right: 0;
+}
+
+.order-detail {
+  .dataTables_info {
+    left: 24px !important;
+    transform: unset;
+    display: block !important;
+  }
+  ._badge {
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    min-width: 85px;
+  }
+
+  .download-flie-btns {
+    display: block !important;
+  }
+}
+
+.download-link {
+  // display: block;
+  // text-decoration: underline !important;
+  // margin-bottom: 4px;
+  // white-space: nowrap;
+  display: block;
+  text-decoration: underline !important;
+  margin-bottom: 4px;
+  color: #0074b2;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  width: 90%;
+  white-space: normal;
+
+  &:hover {
+    text-decoration: none !important;
+  }
+
+  svg {
+    color: $tertiary-dark-color;
+  }
+}
+
+//  customBlock
+.customBlock {
+  background-color: $bg-white;
+  border-radius: 8px;
+  border: 1.5px solid $tertiary-lightGray-color;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.06);
+  padding: 30px 40px;
+
+  .mainTitle {
+    font-size: 1.625rem;
+    line-height: 31px;
+    color: $tertiary-dark-color;
+    font-weight: 700;
+  }
+
+  .card-props {
+    padding: 30px 24px;
+  }
+}
+
+.job_button {
+  border: none;
+  background: transparent;
+  outline: none !important;
+}
+
+.order-detail .dataTables_wrapper .table_header_data {
+  margin-top: 0;
+}
+
+.order_card_paragraph {
+  margin-bottom: 2px;
+  word-break: break-all;
+}
+.order_card_body {
+  display: flex;
+  column-gap: 8px;
+}
+
+.order_card_body p {
+  display: flex;
+  align-items: center;
+  line-height: 12px;
+  margin: 6px 0 0 0;
+  font-size: 0.75rem;
+}
+.order_card_body svg {
+  width: 22px;
+  height: auto;
+}
+.order_card_body .d-flex {
+  flex-wrap: wrap;
+}
+.topCards .tile_class {
+  width: 24%;
+  min-height: 120px;
+
+  dt{
+    margin-bottom: 4px;
+  }
+}
+
+.payment_tiles .tile_class {
+  width: 49%;
+  min-height: 130px;
+}
+// RESPONSIVE
+
+@media only screen and (min-width: 992px) {
+  .customRowCard .col-lg-6:nth-child(1),
+  .customRowCard .col-lg-6:nth-child(2),
+  .customRowCard .col-lg-6:nth-child(3) {
+    width: 33.33%;
+  }
+
+  // .topCards .col-lg-6:nth-child(4),
+  // .topCards .col-lg-6:nth-child(5),
+  // .topCards .col-lg-6:nth-child(6),
+  // .topCards .col-lg-6:nth-child(7) {
+  //   width: 25%;
+  // }
+}
+@media only screen and (max-width: 1545px) {
+  .topCards .tile_class {
+    width: 32.3%;
+}
+.order_card_body p{
+  font-size: 0.73rem;
+}
+}
+@media only screen and (max-width: 1920px) {
+
+  .topCards .col-xl-3:nth-child(4){
+    .card-props {
+      .cardTitle{
+        dt{
+          font-size: 0.625rem;
+          line-height: 14px;
+          margin-bottom: 0;
+        }
+        dd{
+          font-size: .75rem;
+          p{
+            font-size: .75rem;
+          }
+    
+          .order_card_body{
+            svg{
+              width: 14px;
+            }
+            p{
+              font-size: 0.625rem !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 1199px) {
+  .card-props {
+    ._badge {
+      font-size: 0.75rem;
+    }
+
+    .cardIcon {
+      max-width: 60px;
+      flex: 0 0 60px;
+      height: 60px;
+    }
+
+    .cardTitle {
+      dt {
+        font-size: 1rem;
+      }
+
+      dd {
+        font-size: 1rem;
+        line-height: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .customBlock {
+    .mainTitle {
+      font-size: 1.375rem;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .order-detail {
+    .form-buttons {
+      padding: 0 15px 30px 15px !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+
+      .btn {
+        margin: 15px 0 0 8px !important;
+      }
+    }
+  }
+
+  .customBlock {
+    padding: 30px 15px;
+
+    .card-props {
+      padding: 15px;
+    }
+  }
+
+  .card-props {
+    ._badge {
+      font-size: 0.75rem;
+    }
+
+    .cardIcon {
+      max-width: 60px;
+      flex: 0 0 60px;
+      height: 60px;
+    }
+
+    .cardTitle {
+      dt {
+        font-size: 1rem;
+      }
+
+      dd {
+        font-size: 1rem;
+        line-height: 16px;
+      }
+    }
+  }
+}

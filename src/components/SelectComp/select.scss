@@ -1,0 +1,299 @@
+@import "../../styles/variable.scss";
+
+// .change-data {
+//     background-color: #fff;
+//     border: 1px double #eee;
+//     color: rgb(41, 146, 208);
+//     padding: 15px;
+//     display: flex;
+//     align-items: cener;
+//     font-size: 13px;
+//     justify-content: center;
+//     width: 100%;
+//     cursor: pointer;
+//     border-bottom-left-radius: 4px;
+//     border-bottom-right-radius: 4px;
+//     border-right: none;
+//     border-left: none;
+//     border-bottom: none;
+//   }
+
+//   .fetching {
+//     display: flex;
+//     justify-content: center;
+//     font-size: 30px;
+//     padding: 20px 0;
+//     font-weight: 200;
+//   }
+
+//   .label {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//   }
+
+//   .select-option-wrapper {
+//     display: flex;
+//     align-items: center;
+//   }
+
+//   .selected-option {
+//     margin-right: 10px;
+//   }
+
+//   .updateOption{
+//     display: flex;
+//     width: 100%;
+//     input{
+//         width: 90%;
+
+//     }
+//   }
+
+/** Custom Select **/
+
+/** Custom Select **/
+.custom-select-wrapper {
+  position: relative;
+  display: inline-block;
+  user-select: none;
+}
+.custom-select-wrapper select {
+  display: none;
+}
+.custom-select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+.custom-select-trigger {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0 84px 0 22px;
+  font-size: 22px;
+  font-weight: 300;
+  color: #fff;
+  line-height: 60px;
+  background: #5c9cd8;
+  border-radius: 4px;
+  padding: 0px !important;
+  cursor: pointer;
+  .select_input {
+    width: 100%;
+    border: none;
+    padding: 6px 12px;
+    background-color: transparent !important;
+    cursor: pointer;
+    // cursor: none;
+    // &focus{
+    //   background-color: #fff;
+    // }
+    &:focus {
+      // background-color: $bg-white;
+      border-color: $primary-color !important;
+      transition: border 0.3s ease-out;
+    }
+  }
+}
+.custom-select-trigger:after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  right: 25px;
+  margin-top: -3px;
+  border-bottom: 1px solid #333;
+  border-right: 1px solid #333;
+  transform: rotate(45deg) translateY(-50%);
+  transition: all 0.4s ease-in-out;
+  transform-origin: 50% 0;
+}
+.custom-select.opened .custom-select-trigger:after {
+  margin-top: 3px;
+  transform: rotate(-135deg) translateY(-50%);
+}
+.custom-options {
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 0;
+  right: 0;
+  min-width: 100%;
+  margin: 15px 0;
+  border: 1px solid #b5b5b5;
+  border-radius: 4px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.07);
+  background: #fff;
+  transition: all 0.4s ease-in-out;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-15px);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  z-index: 999;
+  height: 250px;
+  ul {
+    height: 300px;
+    overflow: auto;
+    padding: 0;
+  }
+  .no-option {
+    margin: auto;
+    list-style: none;
+    padding: 20px 10px;
+    text-transform: capitalize;
+    font-size: 15px;
+  }
+  .list-footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #b5b5b5;
+    padding: 15px 10px;
+    .selectlist {
+      width: 100%;
+      display: flex;
+      input {
+        width: 85%;
+        margin-right: 8px;
+        border-radius: 4px;
+        font-size: 0.875rem;
+        text-indent: 8px;
+        border: 1px solid #ccc ;
+        height: 38px;
+      }
+      
+    }
+  }
+}
+.custom-select.opened .custom-options {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  transform: translateY(0);
+}
+.custom-options:before {
+  position: absolute;
+  display: block;
+  content: "";
+  bottom: 100%;
+  right: 25px;
+  width: 7px;
+  height: 7px;
+  margin-bottom: -4px;
+  border-top: 1px solid #b5b5b5;
+  border-left: 1px solid #b5b5b5;
+  background: #fff;
+  transform: rotate(45deg);
+  transition: all 0.4s ease-in-out;
+}
+.option-hover:before {
+  background: #f9f9f9;
+}
+.custom-option {
+  position: relative;
+  display: block;
+  padding: 0 22px;
+  border-bottom: 1px solid #ddd;
+  font-size: 18px;
+  font-weight: 600;
+  color: #b5b5b5;
+  line-height: 35px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  padding: 10px;
+  .option-group {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    input {
+      width: 85%;
+      margin-right: 8px;
+      border-radius: 4px;
+      font-size: .875rem;
+      text-indent: 8px;
+      border: 1px solid #ccc ;
+    }
+    button {
+      border: none;
+      background-color: transparent;
+      width: 10%;
+    }
+    span {
+      font-size: .875rem;
+      color: #10232E;
+      letter-spacing: .02rem;
+  }
+  }
+}
+.custom-option:first-of-type {
+  border-radius: 4px 4px 0 0;
+}
+.custom-option:last-of-type {
+  border-bottom: 0;
+  border-radius: 0 0 4px 4px;
+}
+.custom-option:hover,
+.custom-option.selection {
+  background: #e6e8eb;
+}
+// .option-group button {
+//   width: auto !important;
+// }
+.updateIcon {
+  background-color: rgba(0, 116, 178, 0.1) !important;;
+  color: #0074b2;
+  border-radius: 4px;
+  width: 38px !important;
+  height: 38px;
+  display: inline-block;
+  font-size: 0.875rem;
+  padding: 0;
+  margin-left: auto;
+}
+.cancelIcon {
+  background-color: rgba(220, 53, 69, 0.1) !important;
+  color: #dc3545;
+  border-radius: 4px;
+  margin-left: 4px;
+  width: 38px !important;
+  height: 38px;
+  display: inline-block;
+  font-size: 0.875rem;
+  padding: 0;
+}
+
+.editIcon {
+  border: 0 !important;
+  background-color: rgba(14, 178, 0, 0.1) !important;
+  color: #097400;
+  border-radius: 4px;
+  width: 38px !important;
+  height: 38px;
+  display: inline-block;
+  font-size: 0.875rem;
+  padding: 0;
+  
+}
+button.addButton {
+  width: 100%;
+  padding: 11px;
+  border: 0;
+  background: #0074b2;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 6px;
+  font-weight: 700;
+  letter-spacing: .1rem;
+  &:hover{
+    background-color: #02659b !important;
+  }
+}

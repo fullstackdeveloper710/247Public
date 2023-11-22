@@ -1,0 +1,35 @@
+@import "../../../styles/variable.scss";
+
+.dashboardCards {
+  .card-props {
+    padding: 20px;
+    min-height: 110px;
+  }
+}
+
+.chart_container {
+  height: 500px;
+  position: relative;
+  margin-bottom: 1%;
+  padding: 1%;
+}
+
+// Responsive
+
+@media screen and (min-width: 1366px) {
+  .dashboardCards {
+    .col-12:nth-child(7),
+    .col-12:nth-child(8),
+    .col-12:nth-child(9),
+    .col-12:nth-child(10) {
+      width: 25%;
+
+      .cardTitle {
+        dt {
+          font-size: 1rem;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@import "../../styles/variable.scss";
+.btn svg {
+  margin-right: 8px;
+  width: 22px;
+  height: auto;
+  position: relative;
+    top: -1px;
+}
+.btn:disabled {
+  background: #ccc !important;
+  color: #fff !important;
+  border: 0;
+}
+.btn:hover {
+  background-color: $button-blue-hover !important;
+}
+  .btn--md {
+    font-size: 0.9rem !important;
+    min-width: 173px;
+    font-weight: 600 !important;
+    height: 52px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    color: $bg-white !important;
+    outline: none;
+    border-radius: 8px !important;
+    // line-height: 16px !important;
+    padding: 10px 25px !important;
+  }
+  .button--blue {
+    background-color: $button-blue !important;
+  }
+  
+  .button--border {
+    color: $button-blue !important;
+    border-color: $button-blue !important;
+  
+    &:hover {
+      color: $bg-white !important;
+    }
+  }
+
+
+  .button--danger{
+    background-color: $danger-button-bg !important;
+
+    &:hover {
+      background:$danger-button-hover-bg!important;
+    }
+  }
+  
+
+  .button--white{
+    background-color: $white-button-bg !important;
+    color: $tertiary-dark-color !important;
+    border:1px solid #C4C4C4 !important;
+
+    &:hover {
+      color:$danger-button-bg!important;
+      background-color: $white-button-bg !important;
+      border-color: $danger-button-bg !important;
+
+    }
+  }

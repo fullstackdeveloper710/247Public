@@ -1,0 +1,260 @@
+@import "../../styles/global.scss";
+
+.sideBar {
+  background-color: $bg-white;
+  border-right: 1px solid $tertiary-lightGray-color;
+  position: fixed;
+  width: 260px;
+  z-index: 999;
+
+  .sideBar-Logo {
+    width: 200px !important;
+    display: block;
+    padding: 0;
+    margin: 40px auto 20px auto;
+
+    svg {
+      width: 100% !important;
+    }
+  }
+  .sideBar__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: $bg-white;
+
+    li {
+      background-color: #fff;
+
+      a {
+        color: $tertiary-dark-color;
+        background-color: $bg-white;
+        font-size: 0.9rem;
+        line-height: 24px;
+        font-weight: 400;
+        text-decoration: none;
+        padding: 13px 23px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 98%;
+        margin: 0 0 0 1%;
+
+        span.sidebar__icon {
+          max-width: 30px;
+          flex: 0 0 30px;
+        }
+
+        &:after {
+          content: "";
+          background: linear-gradient(
+            90deg,
+            #0676b5 0%,
+            rgba(1, 116, 178, 0) 91.25%
+          );
+          opacity: 0.2;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          width: 60px;
+          border-radius: 0px 5px 5px 0px;
+          transform: translateX(-100px);
+          transition: all 0.5s ease-out;
+        }
+
+        &:hover {
+          color: $primary-color;
+          &:after {
+            transform: translateX(0);
+          }
+        }
+      }
+    }
+
+    .active {
+      a {
+        color: $primary-color;
+        font-weight: 800;
+        &:after {
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+
+  .sideBar__listTop {
+    padding-top: 8px;
+  }
+  span.badge {
+    background: $primary-color;
+    float: right;
+    font-weight: 400;
+    border-radius: 30px;
+  }
+  .spaceCardWrapper,
+  .invoicesCard {
+    padding: 0 15px;
+    margin-top: 20px;
+    .spaceCard {
+      background: $bg-white;
+      border: 1.5px solid rgba(90, 98, 107, 0.25);
+      box-shadow: 0px 4px 24px rgb(0 0 0 / 6%);
+      border-radius: 8px;
+      padding: 10px;
+      box-sizing: border-box;
+      .spaceCard__left {
+        width: 60px;
+        height: 60px;
+        flex: 0 0 60px;
+        background: rgba(0, 116, 178, 0.05);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $primary-color;
+        svg {
+          width: 22px;
+          height: auto;
+        }
+      }
+      .spaceCard__Right {
+        padding-left: 10px;
+        span {
+          color: $primary-color;
+          font-size: 1rem;
+          line-height: 19px;
+          font-weight: 700;
+          margin: 0 0 5px 0;
+          width: 100%;
+          display: block;
+        }
+        p {
+          display: flex;
+          align-items: center;
+          font-weight: 700;
+          font-size: 0.875rem;
+          line-height: 16px;
+          color: $tertiary-dark-color;
+          margin-top: 8px;
+          span {
+            width: 57px !important;
+            margin: 0px;
+            font-size: 0.875rem;
+          }
+        }
+      }
+      .spaceCard_bottom {
+        width: 100%;
+        padding-top: 10px;
+        p {
+          display: flex;
+          justify-content: space-between;
+          font-size: 14px;
+          span {
+            display: inline-block;
+            color: #0074b2;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+    .invoiceCard {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+
+  .invoicesCard {
+    .spaceCard {
+      background: $bg-white;
+      border: 1.5px solid rgba(90, 98, 107, 0.25);
+      box-shadow: 0px 4px 24px rgb(0 0 0 / 6%);
+      border-radius: 8px;
+      padding: 10px;
+      box-sizing: border-box;
+      flex-direction: column;
+      p {
+        font-size: 16px;
+        line-height: 16px;
+        color: $primary-color;
+        margin-top: 8px;
+      }
+      .text-left {
+        font-weight: 700;
+        font-size: 16px;
+        margin-top: 3px;
+      }
+      .innerInvoicecard {
+        p {
+          color: #000;
+          margin-bottom: 5px;
+          display: flex;
+          justify-content: space-between;
+          font-size: 14px;
+          span {
+            display: inline-block;
+            width: 70px;
+            color: $primary-color;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
+  .sideBar__listBottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.sidebarScroll {
+  scrollbar-width: thin;
+  scrollbar-color: #ccc;
+  // overflow-y: auto;
+  // height: calc(100vh - 150px);
+  overflow-y: scroll;
+  height: calc(100vh - 311px);
+}
+
+.sidebarScroll::-webkit-scrollbar {
+  width: 3px;
+}
+
+.sidebarScroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebarScroll::-webkit-scrollbar-thumb {
+  background-color: #b6b6b6;
+}
+
+@media screen and (min-width: 767px) {
+  .sideBar {
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sideBar {
+    padding-bottom: 15px;
+    .mt-5 {
+      margin-top: 0 !important;
+    }
+  }
+  body .sideBar__listBottom {
+    position: static !important;
+    margin-top: 15px !important;
+  }
+
+  .sideBar .spaceCardWrapper .spaceCard {
+    display: inline-flex !important;
+  }
+}

@@ -1,0 +1,310 @@
+@import "../../styles/variable.scss";
+
+.inputRow {
+  margin-bottom: 30px;
+  .form-control {
+    background-color: $input-bg;
+    min-height: 60px;
+    border-radius: 8px;
+    border-top: transparent;
+    border-top-width: initial;
+    border-top-style: initial;
+    border-top: 1.5px solid transparent;
+    border-left: 1.5px solid transparent;
+    border-right: 1.5px solid transparent;
+    border-bottom: 1.5px solid $input-border-btm;
+    outline: none !important;
+    box-shadow: 0 0 0 !important;
+    font-size: 1rem;
+    color: $tertiary-dark-color;
+    line-height: 2.5;
+
+    &:focus {
+      background-color: $bg-white;
+      border-color: $primary-color !important;
+      transition: border 0.3s ease-out;
+    }
+  }
+
+  label {
+    color: $label-color;
+    font-size: 1.125rem;
+    line-height: normal;
+  }
+  .inputBlock {
+    position: relative;
+    width: 100%;
+    svg {
+      position: absolute;
+      top: 16px;
+      right: 15px;
+      width: 20px;
+      color: $tertiary-gray-color;
+    }
+  }
+}
+
+.error-row .form-control {
+  border: 1.5px solid $error-msg-color !important;
+  &:focus {
+    border-color: $error-msg-color !important;
+    transition: border 0.3s ease-out;
+  }
+}
+span.error-msg {
+  color: $error-msg-color;
+  margin-top: 8px;
+  display: block;
+  font-size: 1rem;
+}
+
+.customCheckbox {
+  position: relative;
+  input {
+    // visibility: hidden;
+    // opacity: 0;
+    position: absolute;
+    position: fixed;
+    left: -9999em;
+    // display: none;
+
+    &:checked + label {
+      &:after {
+        background-color: $primary-color;
+        border-color: $primary-color;
+      }
+      &:before {
+        content: "";
+        width: 12px;
+        height: 7px;
+        border-bottom: 2px solid $bg-white;
+        border-left: 2px solid $bg-white;
+        position: absolute;
+        left: 5px;
+        top: 7px;
+        z-index: 3;
+        transform: rotate(-39deg);
+      }
+    }
+  }
+  label {
+    padding-left: 32px;
+    position: relative;
+    color: #1e1e1e;
+    font-size: 1.125rem;
+    cursor: pointer;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 22px;
+      height: 22px;
+      border: 2px solid $tertiary-gray-color;
+      border-radius: 3px;
+    }
+  }
+}
+.customCheckbox input:focus + label:after {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+.radioButton {
+  input[type="radio"] {
+    position: absolute;
+    position: fixed;
+    left: -9999em;
+
+    &:checked + label {
+      &:after {
+        background-color: transparent;
+        border-color: $primary-color;
+      }
+      &:before {
+        content: "";
+        width: 9px;
+        height: 9px;
+        background-color: $primary-color;
+        border-radius: 10px;
+        border: 0 !important;
+        left: 7px;
+        top: 7px;
+      }
+    }
+  }
+
+  label {
+    padding-left: 30px;
+
+    &:after {
+      content: "";
+
+      width: 22px;
+      height: 22px;
+      border: 2px solid $tertiary-gray-color;
+      border-radius: 22px;
+    }
+  }
+}
+
+.react-tel-input {
+  .form-control {
+    background-color: $input-bg !important;
+    min-height: 60px !important;
+    border-radius: 8px !important;
+    border-top: transparent !important;
+    border-top-width: initial !important;
+    border-top-style: initial !important;
+    border-top: 1.5px solid transparent !important;
+    border-left: 1.5px solid transparent !important;
+    border-right: 1.5px solid transparent !important;
+    border-bottom: 1.5px solid $input-border-btm !important;
+    outline: none !important;
+    box-shadow: 0 0 0 !important;
+    font-size: 1rem !important;
+    color: $tertiary-dark-color !important;
+    width: 100% !important;
+
+    &:focus {
+      background-color: $bg-white !important;
+      border-color: $primary-color !important;
+      transition: border 0.3s ease-out !important;
+    }
+  }
+}
+.react-tel-input {
+
+  .flag-dropdown {
+    .selected-flag:focus {
+      outline: 2px solid #000 !important;
+    }
+  }
+
+  .flag-dropdown {
+    background: transparent !important;
+    border: 0 !important;
+    .selected-flag {
+      background: transparent !important;
+      border: 0 !important;
+    }
+  }
+  &:focus {
+    background-color: $bg-white !important;
+    border-color: $primary-color !important;
+    transition: border 0.3s ease-out !important;
+  }
+
+  .country-list {
+    .country {
+      letter-spacing: 1px;
+      font-family: "Inter", sans-serif !important;
+      &:hover {
+        background-color: #0074b2 !important;
+        color: #fff;
+        span {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+.phoneInput {
+  .PhoneInputCountryIcon {
+    background-color: $input-bg !important;
+    min-height: 60px !important;
+    padding: 0 20px 0 8px;
+    border-radius: 8px !important;
+    border-top: transparent !important;
+    border-top-width: initial !important;
+    border-top-style: initial !important;
+    border-top: 1.5px solid transparent !important;
+    border-left: 1.5px solid transparent !important;
+    border-right: 1.5px solid transparent !important;
+    border-bottom: 1.5px solid $input-border-btm !important;
+    min-width: 55px;
+    box-shadow: 0 0 0 !important;
+    svg {
+      position: absolute !important;
+      top: 16px;
+      right: 21px;
+      width: 22px;
+      color: #000;
+      height: 32px;
+    }
+  }
+  .PhoneInputCountrySelectArrow {
+    right: 8px;
+    position: absolute;
+    top: 27px;
+  }
+  .PhoneInputCountry {
+    select {
+      option {
+        color: #000 !important;
+      }
+      &:focus + .PhoneInputCountryIcon {
+        border: 1.5px solid #000 !important;
+      }
+    }
+  }
+  .PhoneInputInput {
+    background-color: $input-bg !important;
+    min-height: 60px !important;
+    border-radius: 8px !important;
+    padding: 8px;
+    border-top: transparent !important;
+    border-top-width: initial !important;
+    border-top-style: initial !important;
+    border-top: 1.5px solid transparent !important;
+    border-left: 1.5px solid transparent !important;
+    border-right: 1.5px solid transparent !important;
+    border-bottom: 1.5px solid $input-border-btm !important;
+    outline: none !important;
+    box-shadow: 0 0 0 !important;
+    font-size: 1rem !important;
+    color: $tertiary-dark-color !important;
+    width: 100% !important;
+    &:focus {
+      background-color: $bg-white !important;
+      border-color: $primary-color !important;
+      transition: border 0.3s ease-out !important;
+    }
+  }
+}
+
+.formatInput {
+  line-height: 18px;
+  display: block;
+  font-size: 0.740rem;
+  margin-top: 10px;
+  letter-spacing: 0.01rem;
+}
+//   #####################  input Responsive  #####################
+
+@media screen and (max-width: 1199px) {
+  .inputRow {
+    label {
+      font-size: 1rem !important;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  input.form-control {
+    min-height: 55px !important;
+    font-size: 0.875rem;
+  }
+  .error-msg {
+    font-size: 0.75rem;
+    line-height: 14px;
+  }
+  .customCheckbox {
+    label {
+      margin: 0 !important;
+      font-size: 1rem;
+    }
+  }
+  .mainWrapper .form-buttons {
+    margin-top: 0 !important;
+  }
+}

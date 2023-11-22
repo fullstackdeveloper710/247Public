@@ -1,0 +1,40 @@
+@import '../../styles/global.scss';
+
+
+.dashBoardHeader{
+    background-color: $bg-white;
+    padding: 24px 30px;
+    border-bottom: 1px solid $tertiary-lightGray-color;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: calc(100% - 260px);
+    margin-left: auto;
+    z-index: 999;
+
+
+    .mainTitle{
+        font-size: 1.7rem;
+        font-weight: 700;
+        line-height: 38px;
+        color: $tertiary-dark-color;
+    }
+    .dashBoardHeader-btn {
+        text-align: right;
+    }
+}
+
+
+// ################################  RESPONSIVE STYLE ###############################
+
+@media screen and (max-width:576px){
+    .dashBoardHeader {
+        text-align: left;
+      }
+    .dashBoardHeader-btn{
+        .btn{
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,200 @@
+/* pdf */
+
+.pdf {
+  .pdf-container {
+    .left {
+      width: 70%;
+    }
+    .right {
+      width: 30%;
+    }
+
+    .dl-comp{
+      display: flex;
+      flex-wrap: wrap;
+      dt{
+        margin-right: 0;
+        width: 130px;
+        word-break: break-all;
+        line-height: normal;
+        margin-bottom: 10px;
+      }
+   
+      dd{
+        width: calc(100% - 130px);
+        word-break: break-all;
+        padding-right: 20px;
+        line-height: normal;
+        margin-bottom: 10px;
+      }
+    }
+    .top-bar {
+      border-top: 20px solid #cc6f26;
+      padding: 24px;
+      display: flex;
+      width: 100%;
+      .left-logo.left {
+        display: flex;
+        align-items: center;
+        figure {
+          img {
+            max-width: 250px;
+          }
+        }
+      }
+
+      p {
+        margin-bottom: 10px;
+      }
+    }
+    .bill-section {
+      clear: both;
+      padding: 15px 0px;
+      margin: 0px 35px;
+      border-top: 2px solid;
+      border-bottom: 2px solid;
+      display: flex;
+
+      p {
+        margin-bottom: 10px;
+      }
+    }
+
+    .tableWrap {
+      padding: 24px 35px;
+
+      .table-container {
+        height: 500px;
+        overflow: auto;
+        table {
+          width: 100%;
+          border-collapse: separate !important;
+          border-spacing: 0 1em !important;
+          thead {
+            tr {
+              background-color: #cc6f26 !important;
+              border-bottom-width: 0px !important;
+              th {
+                padding: 10px;
+                text-align: left;
+                font-size: 0.875rem;
+                font-weight: 700;
+                color: #212121;
+              }
+            }
+          }
+        }
+        tbody {
+          tr {
+            background-color: #eeeeee !important;
+            border-bottom-width: 0px !important;
+            td {
+              padding: 10px;
+              text-align: left;
+              font-size: 0.875rem;
+            }
+          }
+        }
+      }
+    }
+    .total-here {
+      padding: 24px;
+      border-top: 2px solid;
+      display: flex;
+      .right {
+        p {
+          margin-bottom: 10px;
+          span {
+            min-width: 100px;
+            display: inline-block;
+          }
+          b {
+            padding-left: 5px;
+          }
+        }
+      }
+    }
+    footer {
+      padding: 10px;
+      background-color: #cc6f26;
+      p {
+        text-align: center;
+        margin: 0px;
+      }
+    }
+  }
+}
+
+.no-invoice {
+  display: flex;
+  width: 100%;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 991px) {
+  .pdf {
+    .pdf-container {
+      .left {
+        width: 50%;
+      }
+      .right {
+        width: 50%;
+      }
+      .top-bar {
+        .left-logo.left {
+          figure {
+            padding-right: 10px;
+            img {
+              max-width: 150px;
+            }
+          }
+        }
+      }
+      .bill-section {
+        padding: 15px 0px;
+      }
+      .table-container {
+        overflow: auto;
+        table {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .pdf {
+    .pdf-container {
+      .left {
+        width: 100%;
+      }
+      .right {
+        width: 100%;
+      }
+      .top-bar {
+        flex-wrap: wrap;
+        .left-logo.left {
+          figure {
+            img {
+              max-width: 150px;
+            }
+          }
+        }
+      }
+      .bill-section {
+        flex-wrap: wrap;
+      }
+      .table-container {
+        table {
+          width: 100%;
+        }
+      }
+
+      .total-here {
+        flex-wrap: wrap;
+      }
+    }
+  }
+}

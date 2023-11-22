@@ -1,0 +1,53 @@
+@import "../../../styles/variable.scss";
+
+.notFound {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $body-bg;
+  min-height: 100vh;
+  &__dialog {
+    max-width: 600px;
+    margin: auto;
+    width: 100%;
+
+    figure{
+        max-width: 400px;
+        margin: auto auto 60px auto ;
+    }
+    h3{
+        font-weight: 900;
+        margin: 30px 0;
+        text-align: center;
+        letter-spacing: .5px;
+        border-top: 1px solid $input-bg;
+        border-bottom: 1px solid $input-bg;
+        padding: 15px 0;
+        font-size: 2.5rem;
+        color: $tertiary-dark-color;
+    }
+    .btn {
+        margin: auto;
+        transition: all .30s ease-in-out;
+        &:hover{
+            transform: translateY(-5px);
+        }
+    }
+  }
+}
+
+
+// Responsive
+
+@media screen and (max-width:767px){
+    .notFound {
+
+        &__dialog {
+            h3{
+                font-size: 1.8rem;
+            }
+        }
+
+    }
+}

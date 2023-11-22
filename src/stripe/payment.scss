@@ -1,0 +1,58 @@
+@import "../styles/variable.scss";
+
+.payment_form {
+  margin-top: 10px;
+}
+
+.payment_element_label {
+  width: 100%;
+}
+
+.payment_input_feild.StripeElement.StripeElement--empty,
+.payment_input_feild.StripeElement.StripeElement--focus,
+.payment_input_feild.StripeElement.StripeElement--complete,
+.payment_input_feild.StripeElement.StripeElement--invalid {
+  padding: 6px 12px;
+  background-color: #e6e8eb;
+  min-height: 60px;
+  border-radius: 8px;
+  border-top: transparent;
+  border-top-width: initial;
+  border-top-style: initial;
+  border-top: 1.5px solid transparent;
+  border-left: 1.5px solid transparent;
+  border-right: 1.5px solid transparent;
+  border-bottom: 1.5px solid #767d85;
+  outline: none !important;
+  box-shadow: 0 0 0 !important;
+  font-size: 1rem;
+  color: #10232e;
+  line-height: 2.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 0.5rem !important;
+}
+.payment_input_feild.StripeElement.StripeElement--focus {
+  background-color: white;
+}
+
+.payment_input_feild.StripeElement.StripeElement--focus {
+  background-color: $bg-white;
+  border-color: $primary-color !important;
+  transition: border 0.3s ease-out;
+}
+
+.payment_input_feild.StripeElement.StripeElement--invalid {
+  background-color: $bg-white;
+  border-color: $error-msg-color !important;
+  transition: border 0.3s ease-out;
+}
+
+.error_list li {
+  width: fit-content;
+}
+
+.payment_error{
+  color: $error-msg-color;
+}

@@ -1,0 +1,11 @@
+.progress {
+  width: 50%;
+  margin-left: 0;
+  height: 20px !important;
+  .progress-bar{
+      width: 100%;
+      font-size: 12px;
+      text-align: end;
+      padding-right: 10px;
+  } 
+}

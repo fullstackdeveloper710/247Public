@@ -1,0 +1,174 @@
+@import "../../../styles/variable.scss";
+
+.EditProfile {
+  padding: 70px;
+
+  &__uploadWrap {
+    display: table;
+    margin: auto;
+
+    button {
+      color: $primary-color;
+      text-decoration: underline;
+      font-weight: 600;
+      margin-top: 8px;
+      display: block;
+      font-size: 1rem;
+      text-align: center;
+      line-height: normal;
+      cursor: pointer;
+      background-color: transparent;
+      padding: 0;
+      border: none;
+    }
+  }
+
+  &__uploadimg {
+    width: 140px;
+    height: 140px;
+    background: rgba(0, 116, 178, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    svg {
+      width: 100px;
+      height: 100px;
+    }
+    img {
+      border-radius: 50%;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .upicon {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: $bg-white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+    cursor: pointer;
+    overflow: hidden;
+
+    svg {
+      width: 20px;
+    }
+  }
+}
+
+// customModalBody
+.customModalBody {
+  .profileUpload {
+    overflow: hidden;
+    input[type="file"] {
+      position: fixed;
+      left: -9999em;
+      opacity: 0;
+    }
+    position: relative;
+
+    &__input {
+      padding: 12px;
+      border: 1.5px solid $input-border-btm;
+      width: 100%;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+
+      button {
+        padding: 6px 10px;
+        background: $tertiary-lightGray-color;
+        margin-right: 15px;
+        border-radius: 4px;
+        font-size: 0.875rem;
+        border: 1px solid $input-border-btm;
+        line-height: normal;
+        width: 100px;
+      }
+      b {
+        font-weight: 400;
+        letter-spacing: 0;
+        line-height: 19px;
+        font-size: .875rem;
+      }
+    }
+  }
+
+  .fileNote {
+    font-size: 0.875rem;
+    color: $badge-inactive-color;
+    margin-top: 5px;
+    display: block;
+  }
+
+  .fileNote_2 {
+    font-size: 0.875rem;
+    color: $badge-inactive-color;
+    margin-top: 25px;
+    display: block;
+  }
+
+  .inputRow {
+    margin-top: 10px;
+    label {
+      font-size: 1rem !important;
+    }
+  }
+}
+
+.modal-header h2 {
+  font-size: 1.625rem;
+  font-weight: 700;
+  color: $tertiary-dark-color;
+  margin: 0;
+}
+
+// Responsive
+
+@media screen and (max-width: 991px) {
+  .EditProfile {
+    padding: 24px;
+
+    &__uploadWrap {
+      margin-bottom: 30px;
+    }
+
+    &__uploadimg {
+      width: 110px;
+      height: 110px;
+      margin: auto;
+    }
+
+    .form-buttons {
+      margin-top: 24px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .EditProfile {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .modalButton {
+    flex-wrap: wrap;
+  }
+
+  .modalButton .btn {
+    width: 100%;
+    margin: 15px 0 0 0 !important;
+  }
+}

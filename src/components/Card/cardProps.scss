@@ -1,0 +1,55 @@
+@import "../../styles/global.scss";
+
+.card-props{
+    background-color: $bg-white;
+    border-radius: 8px;
+    border: 1.5px solid $tertiary-lightGray-color;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.06);
+    padding: 16px 24px;
+    min-height: 130px;
+
+    .cardIcon {
+       max-width: 70px;
+        flex: 0 0 70px;
+        height: 70px;
+        background: rgba(0, 116, 178, 0.05);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $primary-color;
+    }
+    ._badge{
+        font-weight: 700;
+    }
+
+    .cardTitle  {
+        margin-bottom: 0;
+        .card-skeleton{
+            min-width: 150px;
+            height:15px;
+          
+        }
+        dt{
+            font-size: 1.15rem;
+            color: $primary-color;
+            text-transform: capitalize;
+            margin-bottom: 8px;
+            line-height: 24px;
+            font-weight: 700;
+        }
+        dd{
+            margin: 0;
+            font-size: 1.15rem;
+            color: $tertiary-dark-color;
+            text-transform: capitalize;
+            line-height: 24px;
+            font-weight: 700;
+
+            span{
+                color: $primary-color;
+            }
+        }
+       
+    }
+}

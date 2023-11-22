@@ -1,0 +1,148 @@
+@import "../../../styles/variable.scss";
+
+.userFileWrap {
+  .userFileDetail {
+    padding: 30px;
+    background-color: $bg-white;
+    border-radius: 8px;
+    border: 1.5px solid $color-light-300;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.06);
+
+    &__card {
+      margin-top: 30px;
+      padding: 24px;
+      border: 1px solid $color-light-300;
+      border-radius: 8px;
+      span {
+        margin: 0;
+        font-weight: 400;
+        color: $tertiary-dark-color;
+        font-size: 1rem;
+      }
+      p {
+        margin: 0;
+        font-weight: 600;
+        color: $tertiary-dark-color;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .accountDetail {
+    padding: 30px;
+    background-color: $bg-white;
+    border-radius: 8px;
+    border: 1.5px solid $color-light-300;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.06);
+    margin-top: 60px;
+
+    .btn {
+      border-radius: 52px !important;
+    }
+
+ 
+  }
+
+  .addClientDetail {
+    padding: 30px;
+    background-color: $bg-white;
+    border-radius: 8px;
+    border: 1.5px solid $color-light-300;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.06);
+    margin-top: 60px;
+
+    .inputRow {
+      margin-top: 30px;
+    }
+
+    &__buttons {
+      display: flex;
+      justify-content: end;
+    }
+  }
+
+  .fileDetails {
+    background-color: $bg-white;
+    border-radius: 8px;
+    border: 1.5px solid $color-light-300;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.06);
+    margin-top: 60px;
+
+    h2 {
+      padding: 30px;
+    }
+  }
+}
+
+.userFileDetail {
+  .dl_tile_list {
+    .tile_class {
+      padding: 24px;
+      border-radius: 8px;
+      background-color: $bg-white;
+      border: 1.5px solid $color-light-300;
+      width: 49%;
+      box-shadow: 0 0 0;
+
+      dt {
+        margin: 0;
+        font-weight: 400;
+        color: $tertiary-dark-color;
+        font-size: 1rem;
+      }
+      dd {
+        margin: 0;
+        font-weight: 600;
+        color: $tertiary-dark-color;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+// Responsive
+
+@media screen and (max-width: 991px) {
+  .userFileWrap {
+    .accountDetail {
+      &__card {
+        .btn {
+          margin-left: 0 !important;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .userFileWrap {
+    .accountDetail {
+      &__card {
+        .btn {
+          margin-left: auto !important;
+        }
+      }
+    }
+  }
+  
+}
+
+@media screen and (max-width: 576px) {
+  .userFileWrap {
+    .accountDetail {
+      &__card {
+        .btn {
+          margin-left: 0 !important;
+        }
+      }
+    }
+  }
+  .userFileDetail {
+    .dl_tile_list {
+      .tile_class {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

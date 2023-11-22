@@ -1,0 +1,79 @@
+@import "../../../styles/variable.scss";
+
+.mainWrapper {
+  background-color: $bg-white;
+  border-radius: 8px;
+  border: 1.5px solid $tertiary-lightGray-color;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.06);
+  min-height: calc(100vh - 170px);
+  .mainTitleWrapper {
+    padding: 30px 24px;
+
+    .mainTitle {
+      font-size: 1.625rem;
+      line-height: 31px;
+      color: $tertiary-dark-color;
+      font-weight: 700;
+    }
+  }
+}
+.no-record-main {
+  padding: 0 50px 50px 50px;
+  .no-record {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid $primary-color;
+    border-radius: 8px;
+  }
+}
+
+._badge {
+  padding: 8px 15px;
+  border-radius: 30px;
+  min-width: 62px;
+  font-size: 1rem;
+  white-space: nowrap;
+  text-align: center;
+  line-height: 20px;
+  font-weight: 500;
+}
+.inactive {
+  background-color: $badge-inactive-bg;
+  color: $badge-inactive-color;
+}
+.active {
+  background-color: $badge-active-bg;
+  color: $badge-active-color;
+}
+.order-table .dataTables_wrapper .dataTables_filter {
+  right: 0;
+}
+
+
+
+.order-table {
+ 
+  ._badge {
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    min-width: 85px;
+  }
+
+}
+
+
+// responsive 
+@media screen and (max-width:991px){
+  .order-management-page .table_header_data {
+    margin-top: -70px;
+}
+}
+
+@media screen and (max-width:575px){
+  .order-management-page .table_header_data {
+      margin-top: 0;
+  }
+}

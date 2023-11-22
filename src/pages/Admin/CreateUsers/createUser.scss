@@ -1,0 +1,170 @@
+@import "styles/variable.scss";
+.Create-User-Wrapper {
+  padding: 100px;
+  .form-width {
+    max-width: 95%;
+    margin: auto;
+    .required_field_label {
+      border: 1px solid $error-msg-color;
+      color: $error-msg-color;
+      padding: 10px;
+      text-align: center;
+      margin-bottom: 40px;
+      border-radius: 8px;
+    }
+    .adduser__header{
+      h2{
+        margin: 20px 0px;
+      }
+    }
+  }
+}
+.uploadFileWrapper {
+  background-color: $upload-bg;
+  border: 1.5px dashed $primary-color;
+  border-radius: 6px;
+  h3 {
+    color: $primary-color;
+    font-size: 1.625rem;
+    font-weight: 700;
+    line-height: 31px;
+    margin: 20px auto 0 auto;
+  }
+  .uploadFile {
+    .inputRow {
+      margin-top: 50px;
+      margin-bottom: 15px;
+      position: relative;
+      label {
+        white-space: nowrap;
+        margin-right: 15px;
+        font-weight: 400;
+        font-size: 1.125rem;
+        line-height: 26px;
+        color: $tertiary-gray-color;
+        position: absolute;
+        left: -180px;
+        top: 20px;
+      }
+      input {
+        width: 100%;
+      }
+    }
+    .filesizeText {
+      font-weight: 400;
+      font-size: 1.125rem;
+      line-height: 26px;
+      color: $tertiary-gray-color;
+    }
+  }
+}
+.innerUpload {
+  display: table;
+  margin: auto;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+  .image-prop {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+.uploadButton {
+  position: relative;
+  border: 0;
+
+  input {
+    opacity: 0;
+    position: fixed;
+    left: -9999em;
+  }
+  label[role="button"] {
+    margin: 0 !important;
+    cursor: pointer;
+    padding: 20px;
+    background-color: $primary-color;
+    color: $bg-white !important;
+    border-radius: 8px;
+    min-width: 230px;
+    font-size: 1.25rem;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    font-weight: 600;
+  }
+
+  input {
+    &:focus + label {
+      outline: 2px solid #000 !important;
+      outline-offset: 2px;
+    }
+  }
+}
+
+// #################################### RESPONSIVE CSS  #######################################
+@media screen and (max-width: 1400px) {
+  .uploadFile {
+    left: 0 !important;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .Create-User-Wrapper {
+    padding: 30px;
+  }
+  .uploadFileWrapper.p-5 {
+    padding: 30px 15px !important;
+    .innerUpload {
+      max-width: 325px;
+      .uploadFile {
+        .inputRow {
+          margin-top: 30px;
+          label {
+            position: static;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+}
+@media screen and (max-width: 767px) {
+  .d-mobile-none {
+    display: none;
+  }
+  .uploadFileWrapper.p-5 {
+    margin-bottom: 15px;
+    .innerUpload {
+      max-width: 325px;
+      h3 {
+        font-size: 1.375rem;
+        line-height: 18px;
+      }
+      .uploadFile {
+        .inputRow {
+          label {
+            font-size: 0.875rem;
+          }
+        }
+      }
+      .upload-btm-btn {
+        .uploadButton {
+          label {
+            min-width: 130px;
+            font-size: 0.875rem;
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
+  .mainContent {
+    .Create-User-Wrapper {
+      padding: 15px !important;
+    }
+    .btn--md {
+      min-width: 75px;
+    }
+  }
+}
